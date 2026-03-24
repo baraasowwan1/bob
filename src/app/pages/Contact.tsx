@@ -53,8 +53,8 @@ export function Contact() {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-800 mb-1">{t('phone')}</h3>
-                <a href="tel:+1234567890" className="text-gray-600 hover:text-rose-600 transition-colors">
-                  +1 (234) 567-8900
+                <a href="tel:0791809728" className="text-gray-600 hover:text-rose-600 transition-colors">
+                  0791809728
                 </a>
               </div>
             </div>
@@ -90,7 +90,7 @@ export function Contact() {
             <h3 className="text-2xl mb-6 text-gray-800">{t('followUs')}</h3>
             <div className="flex gap-4">
               <a
-                href="https://facebook.com/bobflowerstore"
+                href="https://www.facebook.com/p/Bob-flower-61564965696654"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 bg-white rounded-lg p-4 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex-1"
@@ -105,7 +105,7 @@ export function Contact() {
               </a>
 
               <a
-                href="https://instagram.com/bobflowerstore"
+                href="https://www.instagram.com/bob_bob_flower"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 bg-white rounded-lg p-4 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex-1"
