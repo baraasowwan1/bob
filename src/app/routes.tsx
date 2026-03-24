@@ -18,10 +18,6 @@ export const router = createBrowserRouter([
         Component: Portfolio,
       },
       {
-        path: 'customer-service',
-        Component: CustomerService,
-      },
-      {
         path: 'contact',
         Component: Contact,
       },
