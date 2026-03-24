@@ -1,22 +1,22 @@
 import { Link, Outlet, useLocation } from 'react-router';
 import { useLanguage } from '../contexts/LanguageContext';
-import { Flower2, Globe, Facebook, Instagram } from 'lucide-react';
+import { Flower2, Globe, Facebook, Instagram, MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
 
 export function Layout() {
   const { language, toggleLanguage, t } = useLanguage();
   const location = useLocation();
 
-  const isActive = (path: string) => {
-    return location.pathname === path;
-  };
+  const isActive = (path: string) => location.pathname === path;
 
   return (
     <div className="min-h-screen flex flex-col bg-rose-50">
+      
       {/* Header */}
       <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
+
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
               <div className="bg-rose-500 p-2 rounded-full">
@@ -28,7 +28,7 @@ export function Layout() {
               </div>
             </Link>
 
-            {/* Navigation */}
+            {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center gap-6">
               <Link
                 to="/"
@@ -45,14 +45,6 @@ export function Layout() {
                 }`}
               >
                 {t('portfolio')}
-              </Link>
-              <Link
-                to="/customer-service"
-                className={`transition-colors ${
-                  isActive('/customer-service') ? 'text-rose-600 font-semibold' : 'text-gray-600 hover:text-rose-600'
-                }`}
-              >
-                {t('customerService')}
               </Link>
               <Link
                 to="/contact"
@@ -93,14 +85,6 @@ export function Layout() {
               }`}
             >
               {t('portfolio')}
-            </Link>
-            <Link
-              to="/customer-service"
-              className={`text-sm whitespace-nowrap transition-colors ${
-                isActive('/customer-service') ? 'text-rose-600 font-semibold' : 'text-gray-600'
-              }`}
-            >
-              {t('customerService')}
             </Link>
             <Link
               to="/contact"
@@ -150,6 +134,17 @@ export function Layout() {
           </div>
         </div>
       </footer>
+
+      {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/962791809728"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-5 right-5 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300"
+      >
+        <MessageCircle className="size-6" />
+      </a>
+
     </div>
   );
 }
