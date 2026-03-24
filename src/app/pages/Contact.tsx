@@ -1,31 +1,8 @@
-import { useState } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Phone, Mail, MapPin, Facebook, Instagram, Navigation } from 'lucide-react';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Textarea } from '../components/ui/textarea';
 
 export function Contact() {
   const { t } = useLanguage();
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Message sent successfully!');
-    setFormData({ name: '', email: '', message: '' });
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
 
   return (
     <div className="container mx-auto px-4 py-12">
@@ -39,7 +16,7 @@ export function Contact() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-12">
+      <div className="max-w-6xl mx-auto mb-12">
         {/* Contact Info */}
         <div>
           <h2 className="text-3xl mb-8 text-gray-800">
@@ -120,68 +97,6 @@ export function Contact() {
               </a>
             </div>
           </div>
-        </div>
-
-        {/* Contact Form */}
-        <div className="bg-white rounded-xl shadow-lg p-8">
-          <h2 className="text-3xl mb-6 text-gray-800">
-            {t('sendMessage')}
-          </h2>
-
-          <form onSubmit={handleSubmit} className="space-y-6">
-            <div>
-              <label htmlFor="name" className="block mb-2 text-gray-700 font-medium">
-                {t('name')}
-              </label>
-              <Input
-                id="name"
-                name="name"
-                type="text"
-                required
-                value={formData.name}
-                onChange={handleChange}
-                className="w-full"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="email" className="block mb-2 text-gray-700 font-medium">
-                {t('email')}
-              </label>
-              <Input
-                id="email"
-                name="email"
-                type="email"
-                required
-                value={formData.email}
-                onChange={handleChange}
-                className="w-full"
-              />
-            </div>
-
-            <div>
-              <label htmlFor="message" className="block mb-2 text-gray-700 font-medium">
-                {t('message')}
-              </label>
-              <Textarea
-                id="message"
-                name="message"
-                required
-                value={formData.message}
-                onChange={handleChange}
-                rows={6}
-                className="w-full resize-none"
-              />
-            </div>
-
-            <Button
-              type="submit"
-              className="w-full bg-rose-600 hover:bg-rose-700 text-white"
-              size="lg"
-            >
-              {t('submit')}
-            </Button>
-          </form>
         </div>
       </div>
 
