@@ -12,13 +12,13 @@ const translations = {
   ar: {
     // Navigation
     home: 'الرئيسية',
-    portfolio: 'معرض الأعمال',
+    portfolio: 'اعمالنا',
     customerService: 'خدمة العملاء',
     contact: 'اتصل بنا',
     
     // Homepage
     welcome: 'مرحباً بكم في',
-    shopName: 'متجر بوب للورود',
+    shopName: 'Bob Flower Store',
     heroSubtitle: 'أجمل الورود والباقات لجميع مناسباتكم الخاصة',
     ourGallery: 'معرض الصور',
     viewAllPortfolio: 'عرض جميع الأعمال',
