@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation } from 'react-router';
 import { useLanguage } from '../contexts/LanguageContext';
-import { Flower2, Globe, Facebook, Instagram, MessageCircle } from 'lucide-react';
+import { Globe, Facebook, Instagram, MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
 
 export function Layout() {
@@ -19,8 +19,12 @@ export function Layout() {
 
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-              <div className="bg-rose-500 p-2 rounded-full">
-                <Flower2 className="size-6 text-white" />
+              <div className="p-2 rounded-full">
+                <img 
+                  src="https://scontent.famm7-1.fna.fbcdn.net/v/t39.30808-6/652310014_122203601690498856_565884404542807583_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=hGOGJPhFhqEQ7kNvwGxEf3u&_nc_oc=Adrsq0VKxqrCJqXvNUBlL4ZkH106LLLejUoi2oLejHOIx3aoaFyWTLA05MV_r7wp5w8lYuJiP_uqayqpKBk212dq&_nc_zt=23&_nc_ht=scontent.famm7-1.fna&_nc_gid=TJoHyM11Zj4KhCTOQUUGxA&_nc_ss=7a32e&oh=00_Afx074MRd-AVNHY853UGuBsrBkaMeH92vNpn7dqZWuSBsA&oe=69C8DEBB" 
+                  alt="Logo" 
+                  className="w-10 h-10 object-contain"
+                />
               </div>
               <div>
                 <h1 className="font-bold text-rose-600">{t('shopName')}</h1>
@@ -108,7 +112,11 @@ export function Layout() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="flex items-center gap-2">
-              <Flower2 className="size-5 text-rose-400" />
+              <img 
+                src="https://scontent.famm7-1.fna.fbcdn.net/v/t39.30808-6/652310014_122203601690498856_565884404542807583_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=1d70fc&_nc_ohc=hGOGJPhFhqEQ7kNvwGxEf3u&_nc_oc=Adrsq0VKxqrCJqXvNUBlL4ZkH106LLLejUoi2oLejHOIx3aoaFyWTLA05MV_r7wp5w8lYuJiP_uqayqpKBk212dq&_nc_zt=23&_nc_ht=scontent.famm7-1.fna&_nc_gid=TJoHyM11Zj4KhCTOQUUGxA&_nc_ss=7a32e&oh=00_Afx074MRd-AVNHY853UGuBsrBkaMeH92vNpn7dqZWuSBsA&oe=69C8DEBB" 
+                alt="Logo" 
+                className="w-6 h-6 object-contain"
+              />
               <span className="text-sm">
                 © 2026 {t('shopName')}. {t('allRightsReserved')}.
               </span>
