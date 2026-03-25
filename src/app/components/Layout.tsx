@@ -123,7 +123,7 @@ export function Layout() {
             </div>
             <div className="flex items-center gap-4">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/p/Bob-flower-61564965696654"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-rose-400 transition-colors"
@@ -131,7 +131,7 @@ export function Layout() {
                 <Facebook className="size-5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/bob_bob_flower/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-rose-400 transition-colors"
