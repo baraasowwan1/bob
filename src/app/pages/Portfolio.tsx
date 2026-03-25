@@ -98,7 +98,7 @@ export function Portfolio() {
             ></iframe>
 
             <iframe
-              src="https://www.instagram.com/p/DWTiBM6DSjA/embed"
+              src="https://www.instagram.com/p/DWQ5-zYDcLL/embed"
               className="w-full h-[420px] rounded-lg bg-white"
             ></iframe>
 
